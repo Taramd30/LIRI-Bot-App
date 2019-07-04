@@ -1,0 +1,7 @@
+command:20:52:22.Params:spotify-this-song;foxy;
+command:20:53:21.Params:spotify-this-song;i want it that way;
+command:20:54:45.Params:spotify-this-song;tommy the cat;
+command:09:05:16.Params:spotify-this-song;i want it that way;
+command:09:19:35.Params:do-what-it-says;undefined;
+command:09:19:52.Params:do-what-it-says;undefined;
+command:09:33:10.Params:do-what-it-says;undefined;
