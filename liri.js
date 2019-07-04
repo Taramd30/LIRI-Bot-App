@@ -5,8 +5,8 @@ var keys = require('./keys.js');
 var Spotify = require('node-spotify-api');
 var spotify1 = new Spotify(keys.spotify);
 var moment = require('moment');
-//var time for bonus log.txt file --atempting
-var time = moment().format('HH:mm:ss');
+//var time for bonus log.txt file --attempting
+var time = moment().format('hh:mm:ss');
 var request = require('request');
 var axios = require("axios");
 
@@ -33,9 +33,9 @@ function command(arg) {
     }
 }
 
-/////////////////////////////////////////////////////////////
-// node liri.js concert - this < artist / band name here > //
-/////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// node liri.js concert-this 'artist/band name here' //
+///////////////////////////////////////////////////////
 function bands(arg) {
     request("https://rest.bandsintown.com/artists/" + arg + "/events?app_id=//API KEY HERE//", function (error, response, body) {
         if (!error && response.statusCode === 200) {
@@ -57,7 +57,7 @@ function bands(arg) {
     });
 }
 ///////////////////////////////////////////////////////
-// node liri.js spotify-this-song '<song name here>' //
+// node liri.js spotify-this-song 'song name here' //
 ///////////////////////////////////////////////////////
 function spotifyFunc(arg) {
     if (arg === undefined) arg = "I Want it That Way";
@@ -77,11 +77,11 @@ function spotifyFunc(arg) {
         consoleLog(result);
     });
 }
-///////////////////////////////////////////////////
-//  node liri.js movie-this '<movie name here>'  //
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//  node liri.js movie-this 'movie name here'  //
+/////////////////////////////////////////////////
 function omdb(arg) {
-    axios.get("http://www.omdbapi.com/?t=ed7074d6" + arg + "&y=&plot=short&apikey=trilogy").then(
+    axios.get("http://www.omdbapi.com/?ittapikey=ed7074d6" + arg + "&y=&plot=short&apikey=trilogy").then(
         function (response) {
 
             var result = {
